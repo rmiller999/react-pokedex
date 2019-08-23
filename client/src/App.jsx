@@ -55,7 +55,7 @@ function App() {
       <PokemonList pokemon={pokemon} handlePokemonDetail={setPokemonId} addToFavorites={addToFavorites} />
       <div className="fixed">
         <PokemonDetail singlePokemon={singlePokemon} pokemonId={pokemonId}/>
-        <PokemonFavorites favorites={favorites} deleteAFavorite={deleteAFavorite} />
+        <PokemonFavorites handlePokemonDetail={setPokemonId} favorites={favorites} deleteAFavorite={deleteAFavorite} />
       </div>
     </div>
     </>

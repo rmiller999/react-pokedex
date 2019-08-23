@@ -8,7 +8,7 @@ function PokemonDetail({singlePokemon, pokemonId}) {
       <div >
         <h2> { pokemonId.toUpperCase()} </h2>
         <img className="pokemonImg" src={ singlePokemon.sprites.front_default} alt="" />
-
+        <img className="pokemonImg" src={ singlePokemon.sprites.back_default} alt="" />
         <h3> <span>Height:</span>  {singlePokemon.height} </h3>
         <h3> <span>Weight:</span>  {singlePokemon.weight} </h3>
         <h3> <span>Abilities:</span> {singlePokemon.abilities[0].ability.name} </h3>
@@ -21,14 +21,14 @@ function PokemonDetail({singlePokemon, pokemonId}) {
   } else {
     content = (
     <div >
-      <p>No pokemon selected</p>
+      <h3>No pokemon selected</h3>
     </div>
     )
   }
 
   return (
     <div className="pokemonDetails">
-      <p className="detail">View Pokemon Details</p>
+      <h1 className="detail">View Pokemon Details</h1>
       <hr/>
       {content}
     </div>
